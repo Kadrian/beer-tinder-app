@@ -1,6 +1,7 @@
 # beer-tinder-app
-Lets you select beers like tinder <br/>
-/statistics shows how often you have voted in favor or against a beer!
+Lets Markus evaluate beers in tinder style <br/>
+Soon deployed at www.markus-trinkt.de <br/>
+www.markus-trinkt.de/statistics shows how often he has voted in favor or against a beer!
 
 # Setup
 gem install sinatra <br/>
