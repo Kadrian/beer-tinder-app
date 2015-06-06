@@ -8,8 +8,8 @@ bundle install <br/>
 bundle exec ruby beer-tinder-app.rb
 
 ## With automatic reload
-gem install rerun
-rerun 'beer-tinder-app.rb'
+gem install rerun <br/>
+rerun beer-tinder-app.rb
 
 # How to deploy
 ssh biertind@markus-trinkt.de 'bash deploy.sh' <br/>
