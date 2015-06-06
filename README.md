@@ -18,5 +18,3 @@ bash deploy.sh
 
 # TODO
 1.) Save the current beer index so Markus doesn't have to start evaluating from the beginning every time he clicks statistics.<br/>
-2.) Insert Beer pics</br>
-3.) Make statistics look even more fancy<br/>
