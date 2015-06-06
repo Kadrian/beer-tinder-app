@@ -8,6 +8,6 @@ gem install sinatra <br/>
 ruby beer-tinder-app.rb
 
 # TODO
-1.) Add two post request in public/js/script.js to update likes/dislikes in db <br/>
-2.) Implement corresponding post 'statistics' method <br/>
-3.) Apply some fancy css to statistics table <br/>
+1.) Save the current beer index so Markus doesn't have to start evaluating from the beginning every time he clicks statistics.<br/>
+2.) Insert Beer pics</br>
+3.) Make statistics look even more fancy<br/>
