@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'slim'
 require 'yaml'
 
 get '/' do
