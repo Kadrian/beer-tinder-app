@@ -12,7 +12,7 @@ gem install rerun
 rerun 'beer-tinder-app.rb'
 
 # How to deploy
-ssh biertind@markus-trinkt.de 'bash deploy.sh'
+ssh biertind@markus-trinkt.de 'bash deploy.sh' <br/>
 Password: 62e15803ce591051b228e
 
 # TODO
