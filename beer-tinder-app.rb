@@ -3,22 +3,28 @@ require 'slim'
 require 'yaml'
 
 get '/' do
-  @beers = YAML.load_file('database.yml')
+  db = YAML.load_file('database.yml')
+  @beers = db['beers']
+  @index = db['index']
   slim :index
 end
 
 get '/statistics' do
-  @beers = YAML.load_file('database.yml').sort_by {|b| - b['likes'] + b['dislikes'] }
+  @beers = YAML.load_file('database.yml')['beers']
+    .sort_by { |b| - b['likes'] + b['dislikes'] }
+  p @beers
   slim :statistics
 end
 
 get '/statistics/reset' do
-  beers = YAML.load_file('database.yml')
-  beers.each do |beer|
-    beer["likes"] = 0
-    beer["dislikes"] = 0
+  db = YAML.load_file('database.yml')
+  db['beers'].each_with_index do |_beer, i|
+    db['beers'][i]['likes'] = 0
+    db['beers'][i]['dislikes'] = 0
   end
-  File.open('database.yml', 'w') {|f| f.write beers.to_yaml }
+  db['index'] = 0
+
+  File.open('database.yml', 'w') { |f| f.write db.to_yaml }
 
   redirect '/'
 end
@@ -28,12 +34,11 @@ post '/statistics' do
   beers = YAML.load_file('database.yml')
 
   # MODIFY
-  beer = beers.select { |b| b['name'] == params['name'] }
-  if beer.empty?
-    return
-  else
-    beer = beer[0]
-  end
+  index = params['name'].to_i
+  beer = beers['beers'][index]
+  return if beer.nil?
+
+  beers['index'] = index
 
   if params['action'] == 'like'
     beer['likes'] += 1
@@ -42,5 +47,5 @@ post '/statistics' do
   end
 
   # STORE
-  File.open('database.yml', 'w') {|f| f.write beers.to_yaml }
+  File.open('database.yml', 'w') { |f| f.write beers.to_yaml }
 end

@@ -1,4 +1,6 @@
 ---
+index: 0
+beers:
 - name: Proto Typ - Kreativbrauerei Kehrwieder
   img_src: images/1.png
   likes: 0

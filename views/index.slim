@@ -8,8 +8,8 @@ html
   body
     .frame
       .container
-        - @beers.each do |beer|
-          .beer id="#{beer['name']}"
+        - @beers.rotate(@index).each do |beer|
+          .beer id="#{@beers.index(beer)}"
             .avatar style="background-image: url(#{beer["img_src"]})"
 
     a.btn.btn-primary.btn-lg.btn-block href="/statistics" data-ajax="false" Zeige Vorlieben
