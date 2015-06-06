@@ -12,8 +12,9 @@ gem install rerun <br/>
 rerun beer-tinder-app.rb
 
 # How to deploy
-ssh biertind@markus-trinkt.de 'bash deploy.sh' <br/>
-Password: 62e15803ce591051b228e
+ssh biertind@markus-trinkt.de <br/>
+(Password: 62e15803ce591051b228e ) <br/>
+bash deploy.sh
 
 # TODO
 1.) Save the current beer index so Markus doesn't have to start evaluating from the beginning every time he clicks statistics.<br/>
