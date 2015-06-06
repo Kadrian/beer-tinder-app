@@ -3,12 +3,12 @@ require 'yaml'
 
 get '/' do
   @beers = YAML.load_file('database.yml')
-  erb :index
+  slim :index
 end
 
 get '/statistics' do
   @beers = YAML.load_file('database.yml').sort_by {|b| - b['likes'] + b['dislikes'] }
-  erb :statistics
+  slim :statistics
 end
 
 get '/statistics/reset' do
