@@ -9,21 +9,11 @@
 </head>
 <body>
   <div id="container">
-    <div class="buddy">
-      <div class="avatar"  style="background-image: url('beer1.jpg')"></div>
-    </div>
-    <div class="buddy">
-      <div class="avatar"  style="background-image: url('beer1.jpg')"></div>
-    </div>
-    <div class="buddy">
-      <div class="avatar"  style="background-image: url('beer1.jpg')"></div>
-    </div>
-    <div class="buddy">
-      <div class="avatar"  style="background-image: url('beer1.jpg')"></div>
-    </div>
-    <div class="buddy">
-      <div class="avatar"  style="background-image: url('beer1.jpg')"></div>
-    </div>
+    <% @beers.each do |beer| %>
+      <div class="buddy">
+        <div class="avatar" style="background-image: url(<%= beer["img_src"] %>)"></div>
+      </div>
+    <% end %>
   </div>
 
 <script type="text/javascript" src="js/script.js"></script>
