@@ -15,6 +15,3 @@ rerun beer-tinder-app.rb
 ssh biertind@markus-trinkt.de <br/>
 (Password: 62e15803ce591051b228e ) <br/>
 bash deploy.sh
-
-# TODO
-1.) Save the current beer index so Markus doesn't have to start evaluating from the beginning every time he clicks statistics.<br/>
