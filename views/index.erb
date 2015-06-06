@@ -8,9 +8,8 @@
 <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 </head>
 <body>
-  <a href="/statistics">Zeige Statistiken</a>
-  <div id="frame">
-    <div id="container">
+  <div class="frame">
+    <div class="container">
       <% @beers.each do |beer| %>
         <div class="beer">
           <div class="avatar" style="background-image: url(<%= beer["img_src"] %>)"></div>
@@ -18,6 +17,8 @@
       <% end %>
     </div>
   </div>
+
+  <a class="statistics" href="/statistics">Zeige Vorlieben</a>
 
 <script type="text/javascript" src="js/script.js"></script>
 
