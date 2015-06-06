@@ -5,13 +5,13 @@ html
     link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
     link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     link rel="stylesheet" type="text/css" href="css/styles.css"
-  body.statistics
+  body
     a.btn.btn-primary.btn-lg.btn-block.mt20 href="/" data-ajax="false" Zurück
     .frame
       section.module
         header
           h1 Markus mag
-        section.wraper
+        section
           - @beers.each do |beer|
             figure.small
               img alt="" src="#{url(beer['img_src'])}" /

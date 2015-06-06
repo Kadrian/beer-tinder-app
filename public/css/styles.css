@@ -133,13 +133,14 @@ h1{
 .module .small {
   float: left;
   width: 50%;
-  max-width: 250px;
+  width: 250px;
+  height: 500px;
   margin: 0px;
 }
 .module figure img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: auto;
+  height: 500px;
 }
 .module figcaption {
   position: absolute;
