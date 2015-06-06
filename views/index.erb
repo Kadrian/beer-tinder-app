@@ -4,23 +4,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 </head>
 <body>
   <div class="frame">
     <div class="container">
       <% @beers.each do |beer| %>
-        <div class="beer">
+        <div id="<%= beer["name"] %>" class="beer">
           <div class="avatar" style="background-image: url(<%= beer["img_src"] %>)"></div>
         </div>
       <% end %>
     </div>
   </div>
 
-  <a class="btn" href="/statistics">Zeige Vorlieben</a>
+  <a class="btn" href="/statistics" data-ajax="false">Zeige Vorlieben</a>
 
-<script type="text/javascript" src="js/script.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+
+  <script type="text/javascript" src="js/script.js"></script>
 
 </body>
 </html>

@@ -11,7 +11,35 @@ get '/statistics' do
   erb :statistics
 end
 
+get '/statistics/reset' do
+  beers = YAML.load_file('database.yml')
+  beers.each do |beer|
+    beer["likes"] = 0
+    beer["dislikes"] = 0
+  end
+  File.open('database.yml', 'w') {|f| f.write beers.to_yaml }
+
+  redirect '/'
+end
+
 post '/statistics' do
-  # TODO: Read beer name from param and update like/dislike count
-  # in database accordingly
+  # LOAD
+  beers = YAML.load_file('database.yml')
+
+  # MODIFY
+  beer = beers.select { |b| b['name'] == params['name'] }
+  if beer.empty?
+    return
+  else
+    beer = beer[0]
+  end
+
+  if params['action'] == 'like'
+    beer['likes'] += 1
+  elsif params['action'] == 'dislike'
+    beer['dislikes'] += 1
+  end
+
+  # STORE
+  File.open('database.yml', 'w') {|f| f.write beers.to_yaml }
 end

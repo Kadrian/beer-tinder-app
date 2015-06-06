@@ -11,7 +11,7 @@ $(document).ready(function(){
       } else {
         $(this).prev().removeClass('rotate-left rotate-right').fadeIn(400);
       }
-      // Add post request to /statistics here to update like count in db
+      $.post( "/statistics", { name: $(this).attr('id'), action: "like"} );
     });
 
    $(".beer").on("swipeleft",function(){
@@ -25,6 +25,6 @@ $(document).ready(function(){
     } else {
       $(this).prev().removeClass('rotate-left rotate-right').fadeIn(400);
     }
-      // Add post request to /statistics here to update dislike count in db
+      $.post( "/statistics", { name: $(this).attr('id'), action: "dislike"} );
   });
 });
