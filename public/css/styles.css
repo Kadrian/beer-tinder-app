@@ -150,6 +150,7 @@ body{
 }
 .module figure img {
   display: block;
+  margin: 0 auto;
   max-width: 100%;
   width: auto;
 }
@@ -178,4 +179,5 @@ body{
 .module .desc {
   display: block;
   padding: 15px;
+  font-size: 1.5em;
 }
