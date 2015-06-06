@@ -115,29 +115,67 @@ body{
 
 .btn{
   color: white;
-  background-color: #0069d6;
   border: none;
   border-radius: 0px;
   text-shadow: none;
-  margin: 0 auto;
-  padding: 20px;
+}
+
+/* Transitions */
+.transition-050 {
+  -moz-transition: 0.50s;
+  -webkit-transition: 0.50s;
+  -ms-transition: 0.50s;
+  -o-transition: 0.50s;
+  transition: 0.50s;
+}
+.opacity85{ 
+  opacity: 0.85; 
+  filter: alpha(opacity=85); 
+}
+.module { max-width: 500px; margin:auto; }
+.module figure {
+  position: relative;
+  overflow: hidden;
+  border:1px solid #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.module .small {
+  float: left;
+  width: 50%;
+  max-width: 250px;
+  height: 350px;
+  margin: 0px;
+}
+.module figure img {
   display: block;
-  text-align: center;
-  font-size: 16px;
+  max-width: 100%;
+  width: auto;
 }
-
-.beer-stats{
-  display: table;
+.module figcaption {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  max-height: 27px;
 }
-.table-cell{
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0 20px;
+.module .text {
+  color: #7A8B8B;
+  background-color: #fff;
+  font-size:0.90em;
 }
-.mini-figure{
-  max-height: 200px;
+.module figure:hover figcaption { max-height: 100%;}
+.module figure:hover figcaption .text {
+  background-color: #7A8B8B;
+  color:#fff;
 }
-
-.fa{
-  padding: 10px;
+.module figcaption a { display: block; text-decoration:none; }
+.module .title {
+  display: inline-block;
+  padding: 5px;
+  text-transform:uppercase;  
+}
+.module .desc {
+  display: block;
+  padding: 15px;
 }

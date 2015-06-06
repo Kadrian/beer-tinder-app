@@ -2,23 +2,24 @@
 html
   head
     meta name="viewport" content="width=device-width, initial-scale=1"
-    link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css"
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
     link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     link rel="stylesheet" type="text/css" href="css/styles.css"
-    link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'
   body
-    a.btn href="/" data-ajax="false" Zurück
+    a.btn.btn-primary.btn-lg.btn-block.mt20 href="/" data-ajax="false" Zurück
     .frame
-      h1 Markus mag
-      section.beers
-        - @beers.each do |beer|
-          .beer-stats
-            .table-cell
-              img.mini-figure alt="" src="#{url(beer['img_src'])}" /
-            .table-cell
-              h2.text.desc= beer["name"]
-              i.fa.fa-2x.fa-thumbs-o-up= " #{beer['likes']}"
-              i.fa.fa-2x.fa-thumbs-o-down= " #{beer['dislikes']}"
+      section.module
+        header
+          h1 Markus mag
+        section
+          - @beers.each do |beer|
+            figure.small
+              img alt="" src="#{url(beer['img_src'])}" /
+              figcaption.transition-050.opacity85
+                  strong.text.transition-050.title
+                    i.fa.fa-thumbs-o-up<> = " #{beer['likes']}"
+                    i.fa.fa-thumbs-o-down< = " #{beer['dislikes']}"
+                  span.text.transition-050.desc= beer["name"]
 
     script src="http://code.jquery.com/jquery-1.11.1.min.js"
     script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
