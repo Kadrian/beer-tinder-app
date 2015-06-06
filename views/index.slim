@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 html
-head
-meta name="viewport" content="width=device-width, initial-scale=1"
-link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
-link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"
-link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css"
-link rel="stylesheet" type="text/css" href="css/styles.css"
-body
-  .frame
-    .container
-      - @beers.each do |beer|
-        .beer id="#{beer['name']}"
-          .avatar style="background-image: url(#{beer["img_src"]})"
+  head
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css"
+    link rel="stylesheet" type="text/css" href="css/styles.css"
+  body
+    .frame
+      .container
+        - @beers.each do |beer|
+          .beer id="#{beer['name']}"
+            .avatar style="background-image: url(#{beer["img_src"]})"
 
-  a.btn href="/statistics" data-ajax="false" Zeige Vorlieben
+    a.btn.btn-primary.btn-lg.btn-block href="/statistics" data-ajax="false" Zeige Vorlieben
 
-  script src="http://code.jquery.com/jquery-1.11.1.min.js"
-  script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"
-  script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
+    script src="http://code.jquery.com/jquery-1.11.1.min.js"
+    script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"
 
-  script type="text/javascript" src="js/script.js"
+    script type="text/javascript" src="js/script.js"
