@@ -1,14 +1,15 @@
 require 'sinatra'
+require 'slim'
 require 'yaml'
 
 get '/' do
   @beers = YAML.load_file('database.yml')
-  erb :index
+  slim :index
 end
 
 get '/statistics' do
-  @beers = YAML.load_file('database.yml')
-  erb :statistics
+  @beers = YAML.load_file('database.yml').sort_by {|b| - b['likes'] + b['dislikes'] }
+  slim :statistics
 end
 
 get '/statistics/reset' do
