@@ -4,6 +4,17 @@
 
 h1{
   margin-top: 0;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 .ui-page-theme-a > a,
@@ -104,67 +115,29 @@ h1{
 
 .btn{
   color: white;
+  background-color: blue;
   border: none;
   border-radius: 0px;
   text-shadow: none;
+  margin: 0 auto;
+  padding: 20px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
 }
 
-/* Transitions */
-.transition-050 {
-  -moz-transition: 0.50s;
-  -webkit-transition: 0.50s;
-  -ms-transition: 0.50s;
-  -o-transition: 0.50s;
-  transition: 0.50s;
+.beer-stats{
+  display: table;
 }
-.opacity85{ 
-  opacity: 0.85; 
-  filter: alpha(opacity=85); 
+.table-cell{
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 20px;
 }
-.module { max-width: 500px; margin:auto; }
-.module figure {
-  position: relative;
-  overflow: hidden;
-  border:1px solid #fff;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.mini-figure{
+  max-height: 200px;
 }
-.module .small {
-  float: left;
-  width: 50%;
-  max-width: 250px;
-  height: 350px;
-  margin: 0px;
-}
-.module figure img {
-  display: block;
-  max-width: 100%;
-  width: auto;
-}
-.module figcaption {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  max-height: 27px;
-}
-.module .text {
-  color: #7A8B8B;
-  background-color: #fff;
-  font-size:0.90em;
-}
-.module figure:hover figcaption { max-height: 100%;}
-.module figure:hover figcaption .text {
-  background-color: #7A8B8B;
-  color:#fff;
-}
-.module figcaption a { display: block; text-decoration:none; }
-.module .title {
-  display: inline-block;
-  padding: 5px;
-  text-transform:uppercase;  
-}
-.module .desc {
-  display: block;
-  padding: 15px;
+
+.fa{
+  padding: 10px;
 }
