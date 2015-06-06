@@ -15,3 +15,6 @@ rerun beer-tinder-app.rb
 ssh biertind@markus-trinkt.de <br/>
 (Password: 62e15803ce591051b228e ) <br/>
 bash deploy.sh
+
+# TODO
+1.) Drink all the beers!!!1!1

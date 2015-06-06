@@ -48,4 +48,5 @@ post '/statistics' do
 
   # STORE
   File.open('database.yml', 'w') { |f| f.write beers.to_yaml }
+  halt 200
 end
