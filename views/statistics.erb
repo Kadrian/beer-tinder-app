@@ -8,15 +8,19 @@
 <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 </head>
 <body>
-  <a href="/statistics">Zeige Statistiken</a>
-  <div id="container">
-    <% @beers.each do |beer| %>
-      <div class="buddy">
-        <div class="avatar" style="background-image: url(<%= beer["img_src"] %>)"></div>
-      </div>
-    <% end %>
-  </div>
-
+  <h1>Statistik</h1>
+  <table>
+    <tr>
+      <th>Name</th><th>Likes</th><th>Dislikes</th>
+    </tr>
+  <% @beers.each do |beer| %>
+    <tr>
+      <td><%= beer["name"] %></td><td><%= beer["likes"] %></td><td><%= beer["dislikes"] %></td>
+    </tr>
+  <% end %>
+</table>
+<br/>
+  <a href="/">Zurück</a>
 <script type="text/javascript" src="js/script.js"></script>
 
 </body>
