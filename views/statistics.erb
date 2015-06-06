@@ -8,19 +8,20 @@
 <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 </head>
 <body>
-  <h1>Statistik</h1>
-  <table>
-    <tr>
-      <th>Name</th><th>Likes</th><th>Dislikes</th>
-    </tr>
-  <% @beers.each do |beer| %>
-    <tr>
-      <td><%= beer["name"] %></td><td><%= beer["likes"] %></td><td><%= beer["dislikes"] %></td>
-    </tr>
-  <% end %>
-</table>
-<br/>
-  <a href="/">Zurück</a>
+  <div class="frame">
+    <h1>Markus mag</h1>
+    <table>
+      <tr>
+        <th>Name</th><th>Prost</th><th>Wuarg</th>
+      </tr>
+    <% @beers.each do |beer| %>
+      <tr>
+        <td><%= beer["name"] %></td><td><%= beer["likes"] %></td><td><%= beer["dislikes"] %></td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+  <a class="btn" href="/">Zurück</a>
 <script type="text/javascript" src="js/script.js"></script>
 
 </body>
