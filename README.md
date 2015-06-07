@@ -7,9 +7,12 @@ www.markus-trinkt.de/statistics shows how often he has voted in favor or against
 bundle install <br/>
 bundle exec ruby beer-tinder-app.rb
 
+If you want to test with a mobile device inside your network:
+bundle exec ruby beer-tinder-app.rb -o 0.0.0.0
+
 ## With automatic reload
 gem install rerun <br/>
-rerun beer-tinder-app.rb
+rerun beer-tinder-app.rb -i '**/*.yml'
 
 # TODO
 1.) Drink all the beers!!!1!1
