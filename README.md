@@ -11,10 +11,5 @@ bundle exec ruby beer-tinder-app.rb
 gem install rerun <br/>
 rerun beer-tinder-app.rb
 
-# How to deploy
-ssh biertind@markus-trinkt.de <br/>
-(Password: 62e15803ce591051b228e ) <br/>
-bash deploy.sh
-
 # TODO
 1.) Drink all the beers!!!1!1
