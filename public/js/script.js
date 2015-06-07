@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $(".beer").on("swiperight",function(){
 
-      $(this).addClass('rotate-left').delay(700).fadeOut(1);
+      $(this).addClass('rotate-left').delay(300).fadeOut(1000);
       $('.beer').find('.status').remove();
       $(this).append('<div class="status like">PROST!</div>');
 
@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
 
    $(".beer").on("swipeleft",function(){
-    $(this).addClass('rotate-right').delay(700).fadeOut(1);
+    $(this).addClass('rotate-right').delay(300).fadeOut(1000);
     $('.beer').find('.status').remove();
     $(this).append('<div class="status dislike">WUARG!</div>');
 
